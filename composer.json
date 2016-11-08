@@ -1,0 +1,32 @@
+{
+    "name": "xelax90/zf-doctrine-orm-translation-loader",
+    "description": "Provides a translation loader that uses doctrine ORM.",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Aleksandr",
+            "email": "schurix@gmx.de"
+        }
+    ],
+	"extra" : {
+		"zf" : {
+			"module" : "DoctrineORMTranslationLoader"
+		}
+	},
+    "autoload": {
+        "psr-4": {
+            "DoctrineORMTranslationLoader\\": "src/"
+        }
+    },
+    "require": {
+		"doctrine/doctrine-module":          "^1.2",
+		"doctrine/doctrine-orm-module":      "^1.1",
+		"zendframework/zend-servicemanager": "^3.1",
+		"zendframework/zend-modulemanager":  "^2.7.2",
+		"zendframework/zend-i18n":           "^2.7.3"
+	},
+	"require-dev" : {
+	},
+	"suggest" : {
+	}
+}
