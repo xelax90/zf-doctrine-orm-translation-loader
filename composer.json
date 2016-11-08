@@ -1,6 +1,6 @@
 {
     "name": "xelax90/zf-doctrine-orm-translation-loader",
-    "description": "Provides a translation loader that uses doctrine ORM.",
+    "description": "Provides a translation loader that uses doctrine ORM",
     "license": "GPLv2",
     "authors": [
         {
