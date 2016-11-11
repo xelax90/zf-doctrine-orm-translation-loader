@@ -5,16 +5,10 @@ use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
 return [
 	// language options
 	'translator' => [
-		'loaderpluginmanager' => [
-			'factories' => [
-				I18n\Translator\Loader\DoctrineEntity::class => I18n\Translator\Loader\Factory\DoctrineEntityFactory::class,
-			],
-		],
 		'remote_translation' => [ 
 			[ 'type' => I18n\Translator\Loader\DoctrineEntity::class ]
 		]
 	],
-	
 	'doctrine' => [
 		'driver' => [
 			__NAMESPACE__ . '_driver' => [
