@@ -25,7 +25,7 @@ class Translation implements JsonSerializable{
 	 * @ORM\Column(type="string", nullable=false)
 	 */
 	protected $translationKey;
-	
+
 	/**
 	 * @var string
 	 * @ORM\Column(type="string")
@@ -43,7 +43,13 @@ class Translation implements JsonSerializable{
 	 * @ORM\Column(type="text")
 	 */
 	protected $translation;
-	
+
+    /**
+     * @var int|null
+     * @ORM\Column(type="int", nullable=true)
+     */
+    protected $translationPluralNumber = null;
+
 	/**
 	 * @return int
 	 */
@@ -88,6 +94,13 @@ class Translation implements JsonSerializable{
 		return $this->textDomain;
 	}
 
+    /**
+     * @return int|null
+     */
+    public function getTranslationPluralNumber() {
+        return $this->translationPluralNumber;
+    }
+
 	/**
 	 * @param string $translationKey
 	 * @return Translation
@@ -123,7 +136,16 @@ class Translation implements JsonSerializable{
 		$this->textDomain = $textDomain;
 		return $this;
 	}
-	
+
+    /**
+     * @param string $translationPluralNumber
+     * @return Translation
+     */
+    public function setTranslationPluralNumber($translationPluralNumber) {
+        $this->translationPluralNumber = $translationPluralNumber;
+        return $this;
+    }
+
 	/**
 	 * Returns data to show in json
 	 * @return array
